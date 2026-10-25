@@ -8,20 +8,20 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://susheelkumar-dev.github.io/">
 <meta property="og:title" content="Susheel Kumar – Senior .NET Engineer | ETRM">
-<meta property="og:description" content="17+ years building energy trading platforms in C#, .NET and SQL Server. Open to senior engineer, tech lead and architect roles. Immediate joiner.">
+<meta property="og:description" content="17+ years at OATI building energy and utility market platforms in C#, .NET and SQL Server. Verified employment. Open to senior engineer, tech lead and architect roles.">
 <meta property="og:image" content="https://susheelkumar-dev.github.io/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0E1A22">
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Susheel Kumar — senior .NET engineer with 17+ years building energy trading (ETRM) platforms. Available immediately for senior engineer, tech lead and architect roles.">
+<meta name="description" content="Susheel Kumar — senior .NET engineer with 17+ years at OATI building energy and utility market platforms. Verified employment. Available immediately.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@600;700;800&display=swap">
 <style>
-/* Layout: recruiter-first. Hero = intro + profile card with hiring snapshot;
-   then why-hire → projects → live demo → domain → skills → career → contact. One 1120px column. */
+/* Layout: recruiter-first. Hero (intro + hiring snapshot) → why me → OATI career (promotion ladder,
+   product timeline + detail) → personal projects → live demo → skills → verified → contact → hosting band. */
 :root{
   --bg:#F2F4F5; --surface:#FFFFFF; --sunk:#E9EDEF; --ink:#0E1A22; --muted:#55636E; --line:#D3DADF;
   --accent:#B45A00; --accent-soft:#FBEBD9; --blue:#1F5FBF; --blue-soft:#E1EAF8;
@@ -57,6 +57,7 @@ p{margin:0}
 .label{font:500 .74rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .mono{font-family:var(--mono)}
 .tnum{font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
 
 /* photo ring */
 .ring{--s:44px;--pad:2px;width:var(--s);height:var(--s);flex-shrink:0;border-radius:50%;padding:var(--pad);background:conic-gradient(from 210deg,var(--accent),var(--blue) 45%,var(--accent) 80%,var(--accent));position:relative}
@@ -74,13 +75,12 @@ p{margin:0}
 .brand-text{display:grid;line-height:1.15;font:700 1.05rem var(--display)}
 .brand-text small{font:500 .68rem var(--mono);color:var(--muted);letter-spacing:.02em}
 .nav{display:flex;gap:2px;margin-left:auto}
-.nav a{text-decoration:none;font-size:.9rem;color:var(--muted);padding:6px 10px;border-radius:6px}
+.nav a{text-decoration:none;font-size:.88rem;color:var(--muted);padding:6px 9px;border-radius:6px;white-space:nowrap}
 .nav a:hover{color:var(--ink)}
 .nav a.on{color:var(--ink);background:var(--sunk)}
 .tools{display:flex;gap:8px;align-items:center}
 .icon-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:38px;min-width:38px;padding:0 10px;border:1px solid var(--line);background:var(--surface);border-radius:8px;font-size:.82rem;color:var(--muted)}
 .icon-btn:hover{color:var(--ink);border-color:var(--muted)}
-.icon-btn kbd{font:500 .7rem var(--mono);border:1px solid var(--line);border-radius:4px;padding:1px 5px;background:var(--sunk)}
 .icon-btn svg{width:16px;height:16px}
 .bar .btn{height:38px;padding:0 14px;font-size:.88rem}
 
@@ -101,7 +101,7 @@ p{margin:0}
 .hero h1{font-size:clamp(2.2rem,4.8vw,3.5rem);line-height:1.06;margin:20px 0 18px;letter-spacing:-.035em}
 .hero h1 em{font-style:normal;color:var(--accent)}
 .hero h1 .hi{display:block;font-size:.5em;letter-spacing:-.01em;color:var(--muted);font-weight:600;margin-bottom:8px}
-.lede{color:var(--muted);font-size:1.1rem;max-width:33em}
+.lede{color:var(--muted);font-size:1.08rem;max-width:34em}
 .lede b{color:var(--ink);font-weight:600}
 .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .keys{display:flex;flex-wrap:wrap;gap:6px;margin-top:26px}
@@ -112,21 +112,23 @@ p{margin:0}
 .profile-top{position:relative;display:grid;justify-items:center;text-align:center;gap:6px}
 .profile-top h2{font-size:1.45rem;margin-top:18px}
 .profile-top p{color:var(--muted);font-size:.92rem}
-.snap{margin:22px 0 18px;display:grid;grid-template-columns:auto minmax(0,1fr);border-top:1px solid var(--line)}
-.snap dt,.snap dd{margin:0;padding:10px 0;border-bottom:1px solid var(--line);font-size:.9rem}
-.snap dt{color:var(--muted);padding-right:16px;font:500 .74rem/1.9 var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.snap{margin:20px 0 18px;display:grid;grid-template-columns:auto minmax(0,1fr);border-top:1px solid var(--line)}
+.snap dt,.snap dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.snap dt{color:var(--muted);padding-right:16px;font:500 .72rem/2 var(--mono);text-transform:uppercase;letter-spacing:.06em}
 .snap dd{font-weight:500}
 .snap dd.ok{color:var(--ok);font-weight:600}
+.snap dd a{color:var(--ok);font-weight:600;text-decoration:none}
+.snap dd a:hover{text-decoration:underline}
 .profile-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .profile-actions .btn{height:42px;font-size:.88rem;padding:0 10px}
 .profile-actions .wide{grid-column:1/-1}
 
-/* facts strip */
+/* facts */
 .facts{border-block:1px solid var(--line);background:var(--surface)}
 .facts .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
 .fact{padding:22px 20px;border-left:1px solid var(--line);display:grid;gap:4px;align-content:start}
 .fact:first-child{border-left:0;padding-left:0}
-.fact b{font:700 1.55rem/1.1 var(--display)}
+.fact b{font:700 1.6rem/1.1 var(--display)}
 .fact span{font-size:.88rem;color:var(--muted)}
 
 /* sections */
@@ -134,16 +136,67 @@ section.block{padding-block:84px 16px}
 .sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:32px;align-items:end;margin-bottom:32px}
 .sec-head p{color:var(--muted);max-width:36em}
 .sec-head .label{margin-bottom:12px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.panel > .label{margin-bottom:14px}
 
 /* why */
-.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.why article{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:grid;gap:10px;align-content:start}
-.why .ico{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
+.why{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.why article{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 16px;align-content:start}
+.why .ico{grid-row:span 3;width:44px;height:44px;border-radius:10px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
 .why .ico svg{width:22px;height:22px}
 .why p{color:var(--muted);font-size:.95rem}
-.why .proof{font:500 .78rem var(--mono);color:var(--ink);border-top:1px dashed var(--line);padding-top:10px;margin-top:4px}
+.why .proof{font:500 .78rem var(--mono);color:var(--ink);margin-top:4px}
 
-/* work */
+/* OATI: markets */
+.markets{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.mk{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 8px;font-size:.88rem}
+.mk b{font:600 .7rem var(--mono);background:var(--blue-soft);color:var(--blue);border-radius:999px;padding:2px 8px}
+
+/* OATI: promotion ladder */
+.ladder{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;align-items:end;margin-top:4px}
+.step{display:grid;gap:8px;align-content:end;text-align:left}
+.step .bar-v{height:var(--h);border-radius:8px 8px 3px 3px;background:linear-gradient(180deg,color-mix(in srgb,var(--accent) var(--a),var(--surface)),color-mix(in srgb,var(--accent) calc(var(--a) - 20%),var(--surface)));border:1px solid color-mix(in srgb,var(--accent) 40%,var(--line));position:relative}
+.step.top .bar-v{background:var(--accent);border-color:var(--accent)}
+.step.top .bar-v::after{content:"★";position:absolute;top:6px;left:50%;transform:translateX(-50%);color:#1A1205;font-size:.8rem}
+.step strong{font-size:.84rem;line-height:1.25;display:block}
+.step small{font:500 .72rem var(--mono);color:var(--muted)}
+
+/* OATI: product timeline */
+.oati-grid{display:grid;gap:16px;margin-top:16px}
+.oati-grid > *,.verify > *,.two > *,.hero-grid > *,.demo > *{min-width:0}
+.gantt-wrap{overflow-x:auto}
+.gantt{min-width:660px;display:grid;grid-template-columns:200px minmax(0,1fr);row-gap:4px}
+.g-axis{grid-column:2;position:relative;height:22px;border-bottom:1px solid var(--line);margin-bottom:6px}
+.g-axis span{position:absolute;transform:translateX(-50%);font:500 .7rem var(--mono);color:var(--muted)}
+.g-row{display:contents}
+:where(.g-row) button{all:unset;cursor:pointer;box-sizing:border-box}
+.g-name{display:block;font-size:.86rem;font-weight:500;padding:6px 10px 6px 0;line-height:1.25;border-radius:6px}
+.g-name small{display:block;font:400 .7rem var(--mono);color:var(--muted)}
+.g-track{display:block;position:relative;height:38px;background:repeating-linear-gradient(90deg,transparent 0 calc(100%/9 - 1px),color-mix(in srgb,var(--line) 60%,transparent) calc(100%/9 - 1px) calc(100%/9));border-radius:6px}
+.g-bar{position:absolute;top:8px;height:22px;border-radius:6px;background:var(--blue-soft);border:1px solid color-mix(in srgb,var(--blue) 45%,transparent);transition:background .15s,border-color .15s}
+.g-bar.overlap{opacity:.85}
+.g-row:hover .g-bar,.g-row button:focus-visible .g-bar{border-color:var(--blue)}
+.g-row.sel .g-bar{background:var(--accent);border-color:var(--accent)}
+.g-row.sel .g-name{color:var(--accent)}
+.g-row button:focus-visible{outline:2px solid var(--accent);outline-offset:1px;border-radius:6px}
+.g-hint{font-size:.82rem;color:var(--muted);margin-top:10px}
+.detail{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:0;padding:0;overflow:hidden}
+.detail > div{padding:24px}
+.detail > div + div{border-left:1px solid var(--line);background:var(--sunk)}
+.detail h3{font-size:1.35rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 14px}
+.chip-s{font:500 .74rem var(--mono);border-radius:999px;padding:3px 10px;background:var(--accent-soft);color:var(--accent)}
+.chip-s.b{background:var(--blue-soft);color:var(--blue)}
+.detail p{color:var(--muted)}
+.detail ul{margin:0;padding-left:18px}
+.detail li{margin:6px 0;font-size:.95rem}
+.stack{display:flex;flex-wrap:wrap;gap:6px}
+.stack span{font:500 .72rem var(--mono);color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:2px 7px;background:var(--surface)}
+.two{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px}
+.two ul{margin:0;padding-left:18px}
+.two li{margin:6px 0;font-size:.95rem}
+
+/* projects */
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
 .chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;font-size:.86rem;color:var(--muted)}
 .chip:hover{color:var(--ink)}
@@ -159,12 +212,14 @@ section.block{padding-block:84px 16px}
 .s-working{background:var(--blue-soft);color:var(--blue)}
 .s-progress{background:var(--accent-soft);color:var(--accent)}
 .card p{color:var(--muted);font-size:.94rem}
-.feat-flow{display:grid;gap:10px;margin-top:6px;padding:16px;border-radius:10px;background:var(--bg);border:1px solid var(--line)}
-.card .hl{display:grid;grid-template-columns:1fr 1fr;gap:6px 18px;font-size:.88rem;color:var(--ink);margin:0;padding:0;list-style:none}
+.card .hl{display:grid;grid-template-columns:1fr 1fr;gap:6px 18px;font-size:.88rem;margin:0;padding:0;list-style:none}
 .card .hl li::before{content:"✓ ";color:var(--ok);font-weight:700}
-.stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
-.stack span{font:500 .72rem var(--mono);color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:2px 7px}
+.card .stack{margin-top:auto}
 .card-more{font-size:.86rem;font-weight:600;color:var(--accent)}
+.feat-flow{display:grid;gap:10px;margin-top:6px;padding:16px;border-radius:10px;background:var(--bg);border:1px solid var(--line)}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.flow span{background:var(--sunk);border:1px solid var(--line);border-radius:7px;padding:6px 10px;font-size:.84rem}
+.flow i{color:var(--muted);font-style:normal}
 
 /* demo */
 .demo{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:40px;align-items:center}
@@ -200,26 +255,8 @@ section.block{padding-block:84px 16px}
 .log .bad{color:var(--warn)}
 .log .good{color:var(--ok)}
 
-/* domain lifecycle */
-.life{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.life-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-bottom:1px solid var(--line)}
-.life-tab{background:none;border:0;border-left:1px solid var(--line);padding:16px 14px;text-align:left;display:grid;gap:2px;position:relative}
-.life-tab:first-child{border-left:0}
-.life-tab small{font:500 .7rem var(--mono);color:var(--muted)}
-.life-tab span{font-weight:600;font-size:.95rem}
-.life-tab[aria-selected="true"]{background:var(--accent-soft)}
-.life-tab[aria-selected="true"]::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--accent)}
-.life-body{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
-.life-body > div{padding:28px}
-.life-body > div + div{border-left:1px solid var(--line);background:var(--sunk)}
-.life-body h3{margin-bottom:10px}
-.life-body p{color:var(--muted)}
-.life-body ul{margin:10px 0 0;padding-left:18px}
-.life-body li{margin:6px 0}
-.term{display:inline-block;font:500 .78rem var(--mono);background:var(--blue-soft);color:var(--blue);padding:2px 8px;border-radius:5px;margin:2px 4px 2px 0}
-
 /* skills */
-.levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.levels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .level{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
 .level h3{display:flex;align-items:center;gap:8px;margin-bottom:4px}
 .level h3 i{width:10px;height:10px;border-radius:2px;display:inline-block}
@@ -232,24 +269,25 @@ section.block{padding-block:84px 16px}
 .used b{color:var(--ink)}
 .used button{background:none;border:0;padding:0;color:var(--accent);font-weight:600;text-decoration:underline;text-underline-offset:3px}
 
-/* career */
-.career{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px}
-.tl{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
-.tl li{position:relative;padding:0 0 30px 26px}
-.tl li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--accent)}
-.tl li.now::before{background:var(--accent)}
-.tl .when{font:500 .78rem var(--mono);color:var(--accent)}
-.tl h3{margin:4px 0 2px}
-.tl .org{font-size:.88rem;color:var(--ink);font-weight:500;margin-bottom:6px}
-.tl p{color:var(--muted);font-size:.95rem}
-.side{display:grid;gap:16px;align-content:start}
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
-.panel .label{margin-bottom:10px}
-.panel ul{margin:0;padding-left:18px}
-.panel li{margin:6px 0;font-size:.95rem}
+/* verified */
+.verify{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:16px}
+.cert{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px;position:relative;overflow:hidden}
+.cert::after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,var(--ok-soft),transparent 70%)}
+.cert-head{display:flex;align-items:center;gap:14px;margin-bottom:18px;position:relative;z-index:1}
+.seal{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--ok);color:var(--surface);flex-shrink:0;box-shadow:0 0 0 5px var(--ok-soft)}
+.seal svg{width:26px;height:26px}
+.cert dl{display:grid;grid-template-columns:auto minmax(0,1fr);margin:0;border-top:1px solid var(--line);position:relative;z-index:1}
+.cert dt,.cert dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.cert dt{color:var(--muted);padding-right:18px;font:500 .72rem/2 var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.cert-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;position:relative;z-index:1}
+.checks{display:grid;gap:12px;align-content:start}
+.checks .panel{display:flex;gap:14px;align-items:flex-start}
+.tick{width:28px;height:28px;border-radius:50%;background:var(--ok-soft);color:var(--ok);display:grid;place-items:center;flex-shrink:0;font-weight:700}
+.checks h3{font-size:1rem}
+.checks p{color:var(--muted);font-size:.9rem}
 
 /* contact */
-.contact{margin-block:84px 40px;background:var(--ink);color:var(--on-ink);border-radius:18px;padding:44px clamp(20px,5vw,52px);display:grid;grid-template-columns:auto minmax(0,1.2fr) minmax(0,1fr);gap:32px;align-items:center}
+.contact{margin-block:84px 24px;background:var(--ink);color:var(--on-ink);border-radius:18px;padding:44px clamp(20px,5vw,52px);display:grid;grid-template-columns:auto minmax(0,1.2fr) minmax(0,1fr);gap:32px;align-items:center}
 .contact .ring-lg{--s:120px}
 .contact .ring-lg img{border-color:var(--ink)}
 .contact h2{color:var(--on-ink)}
@@ -263,7 +301,16 @@ section.block{padding-block:84px 16px}
 .contact-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 .contact-links a{color:var(--on-ink);font-size:.9rem;border:1px solid color-mix(in srgb,var(--on-ink) 25%,transparent);padding:8px 14px;border-radius:8px;text-decoration:none}
 .contact-links a:hover{border-color:var(--on-ink)}
-footer{padding-block:24px 48px;color:var(--muted);font-size:.85rem}
+
+/* hosting band */
+.host{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 22px;margin-bottom:24px}
+.host .az{width:44px;height:44px;border-radius:10px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center}
+.host .az svg{width:24px;height:24px}
+.host p{color:var(--muted);font-size:.9rem}
+.host b{color:var(--ink)}
+.host-links{display:flex;gap:8px;flex-wrap:wrap}
+.host-links .btn{height:40px;font-size:.86rem;padding:0 14px}
+footer{padding-block:8px 48px;color:var(--muted);font-size:.85rem}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 /* dialogs */
@@ -275,9 +322,6 @@ dialog::backdrop{background:color-mix(in srgb,#000 50%,transparent);backdrop-fil
 .dlg-body h4{margin:0 0 8px;font:500 .75rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .dlg-body ul{margin:0;padding-left:18px}
 .dlg-body li{margin:5px 0}
-.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.flow span{background:var(--sunk);border:1px solid var(--line);border-radius:7px;padding:7px 10px;font-size:.85rem}
-.flow i{color:var(--muted);font-style:normal}
 .dlg-links{display:flex;gap:10px;flex-wrap:wrap}
 .close{width:36px;height:36px;border-radius:8px;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;flex-shrink:0}
 #palette{width:min(560px,calc(100vw - 32px));margin-top:12vh}
@@ -288,37 +332,50 @@ dialog::backdrop{background:color-mix(in srgb,#000 50%,transparent);backdrop-fil
 .pal-list li.sel{background:var(--accent-soft)}
 .pal-foot{padding:10px 16px;border-top:1px solid var(--line);font:500 .72rem var(--mono);color:var(--muted)}
 .toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--on-ink);padding:10px 18px;border-radius:8px;font-size:.9rem;z-index:50}
-
-/* mobile action bar */
 .mbar{display:none}
 
+@media (max-width:1080px){ .nav a.opt{display:none} }
 @media (max-width:980px){
-  .hero-grid,.demo,.career,.sec-head{grid-template-columns:1fr}
+  .hero-grid,.demo,.sec-head,.verify,.two{grid-template-columns:1fr}
   .profile{max-width:460px;width:100%;margin:0 auto;order:-1}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .card.featured{grid-row:auto}
-  .grid,.why{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .why article:last-child{grid-column:1/-1}
-  .levels{grid-template-columns:1fr}
   .contact{grid-template-columns:1fr}
   .nav{display:none}
   .tools{margin-left:auto}
+  .detail{grid-template-columns:1fr}
+  .detail > div + div{border-left:0;border-top:1px solid var(--line)}
+}
+@media (max-width:760px){
+  .ladder{grid-template-columns:1fr;gap:0;border-left:2px solid var(--line);margin-left:6px}
+  .step{display:flex;align-items:center;gap:12px;padding:8px 0 8px 18px;position:relative}
+  .step .bar-v{position:absolute;left:-7px;width:12px;height:12px!important;border-radius:50%}
+  .step.top .bar-v::after{content:none}
+  .step strong{display:inline}
+  .step small{margin-left:8px}
+  .why,.levels{grid-template-columns:1fr}
+  .host{grid-template-columns:auto minmax(0,1fr)}
+  .host-links{grid-column:1/-1}
 }
 @media (max-width:640px){
   .facts .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
   .fact{padding:16px 0 16px 16px}
   .fact:nth-child(odd){border-left:0;padding-left:0}
   .fact:nth-child(n+3){border-top:1px solid var(--line)}
-  .grid,.why{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
   .card.featured{grid-column:auto}
-  .life-tabs{grid-template-columns:repeat(5,minmax(96px,1fr));overflow-x:auto}
-  .life-body{grid-template-columns:1fr}
-  .life-body > div + div{border-left:0;border-top:1px solid var(--line)}
-  .life-body > div{padding:20px}
+  .card .hl{grid-template-columns:1fr}
   .icon-btn .lbl,.bar .btn{display:none}
   .brand-text small{display:none}
   section.block{padding-block:60px 12px}
   .hero{padding-block:32px 40px}
   .ring-lg{--s:150px}
+  .detail > div{padding:20px}
+  .gantt{min-width:0;grid-template-columns:1fr}
+  .g-axis,.g-track{display:none!important}
+  .g-name{padding:8px 10px;border-bottom:1px solid var(--line)}
+  .g-row.sel .g-name{background:var(--accent-soft)}
+  .g-hint{display:none}
   body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
   .mbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--surface);border-top:1px solid var(--line);padding-top:10px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
   .mbar .btn{height:44px}
@@ -335,10 +392,10 @@ dialog::backdrop{background:color-mix(in srgb,#000 50%,transparent);backdrop-fil
       <span class="brand-text">Susheel Kumar<small>Senior .NET Engineer · ETRM</small></span>
     </a>
     <nav class="nav" aria-label="Sections">
-      <a href="#why">Why me</a><a href="#work">Projects</a><a href="#demo">Live demo</a><a href="#skills">Skills</a><a href="#career">Experience</a>
+      <a href="#why" class="opt">Why me</a><a href="#oati">Career</a><a href="#work">Projects</a><a href="#demo" class="opt">Live demo</a><a href="#skills">Skills</a><a href="#verified">Verified</a>
     </nav>
     <div class="tools">
-      <button class="icon-btn" id="openPalette" aria-label="Open quick search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lbl">Search</span><kbd class="lbl">/</kbd></button>
+      <button class="icon-btn" id="openPalette" aria-label="Open quick search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
       <button class="icon-btn" id="themeBtn" aria-label="Switch colour theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg></button>
       <a class="btn btn-primary" href="#contact">Contact</a>
     </div>
@@ -351,14 +408,15 @@ dialog::backdrop{background:color-mix(in srgb,#000 50%,transparent);backdrop-fil
       <div>
         <div class="eyebrow"><span>Senior .NET Engineer</span><span>Tech Lead</span><span>Solutions Architect</span></div>
         <h1><span class="hi">Hi, I'm Susheel Kumar.</span>I build <em>trading-grade</em> enterprise software.</h1>
-        <p class="lede"><b>17+ years</b> designing and building energy trading (ETRM) platforms in <b>C#, .NET and SQL Server</b> for regulated electricity markets across South-East Asia. Now adding microservices, cloud and applied AI to that foundation.</p>
+        <p class="lede"><b>17+ years at OATI</b> building platforms for energy and utility markets: gas pipelines, market clearing, ETRM, contract settlement, outage management and DER enrollment. Hands-on in <b>C#, .NET and SQL Server</b>, and I led teams of <b>20–25 engineers</b> while still writing code.</p>
         <div class="hero-actions">
-          <a class="btn btn-accent" href="#work">View my projects</a>
+          <a class="btn btn-accent" href="#oati">See my career</a>
+          <a class="btn" href="#work">Personal projects</a>
           <button class="btn" data-copy-email><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Copy email</button>
           <a class="btn" data-resume hidden>Download résumé</a>
         </div>
         <div class="keys" aria-label="Core skills">
-          <span>C#</span><span>.NET Core</span><span>ASP.NET Core Web API</span><span>SQL Server</span><span>Ext JS</span><span>Angular</span><span>Microservices</span><span>Kafka</span><span>ETRM</span>
+          <span>C#</span><span>.NET Core</span><span>ASP.NET Core Web API</span><span>SQL Server</span><span>Hangfire</span><span>Kafka</span><span>Ext JS</span><span>Angular</span><span>ETRM</span>
         </div>
       </div>
 
@@ -369,11 +427,12 @@ dialog::backdrop{background:color-mix(in srgb,#000 50%,transparent);backdrop-fil
           <p>Senior .NET Full-Stack Engineer · Energy Trading</p>
         </div>
         <dl class="snap">
-          <dt>Experience</dt><dd>17+ years (2008 – 2026)</dd>
-          <dt>Domain</dt><dd>Energy trading &amp; markets (ETRM)</dd>
+          <dt>Experience</dt><dd>17+ years (Jun 2008 – Jan 2026)</dd>
+          <dt>Last role</dt><dd>Sr. Development Manager, OATI</dd>
           <dt>Location</dt><dd>India · Chandigarh / Bangalore</dd>
           <dt>Work mode</dt><dd>Remote, hybrid or on-site</dd>
           <dt>Notice</dt><dd class="ok">Immediate joiner</dd>
+          <dt>Verified</dt><dd><a href="#verified">✓ Employment &amp; ID (HireSure)</a></dd>
         </dl>
         <div class="profile-actions" id="profileActions">
           <button class="btn btn-primary wide" data-copy-email>Copy email address</button>
@@ -384,10 +443,10 @@ dialog::backdrop{background:color-mix(in srgb,#000 50%,transparent);backdrop-fil
 
   <div class="facts">
     <div class="wrap">
-      <div class="fact"><b class="tnum">17+ yrs</b><span>building enterprise software, June 2008 to January 2026</span></div>
-      <div class="fact"><b>ETRM</b><span>trade capture, scheduling &amp; settlement for the Singapore market</span></div>
-      <div class="fact"><b>.NET + SQL</b><span>C#, ASP.NET Core, Web API, SQL Server, Ext JS in production</span></div>
-      <div class="fact"><b>6 projects</b><span>built in 2026, including a 9-service platform live on AWS</span></div>
+      <div class="fact"><b class="tnum">17+ yrs</b><span>at OATI, June 2008 to January 2026</span></div>
+      <div class="fact"><b class="tnum">6</b><span>promotions, Software Developer to Sr. Development Manager</span></div>
+      <div class="fact"><b class="tnum">9</b><span>energy &amp; utility products across 3 continents</span></div>
+      <div class="fact"><b class="tnum">20–25</b><span>engineers led in my last 7–8 years</span></div>
     </div>
   </div>
 
@@ -395,27 +454,75 @@ dialog::backdrop{background:color-mix(in srgb,#000 50%,transparent);backdrop-fil
     <div class="wrap">
       <div class="sec-head">
         <div><p class="label">Why hire me</p><h2>What I bring to your team.</h2></div>
-        <p>Deep domain knowledge, years of production experience, and recent hands-on work with modern architecture.</p>
+        <p>Deep domain knowledge, long production experience, real leadership, and recent hands-on work with modern architecture.</p>
       </div>
       <div class="why">
         <article>
           <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
-          <h3>Energy-trading domain depth</h3>
-          <p>Seventeen years inside trade capture, scheduling and settlement for regulated electricity markets. I understand the business from day one.</p>
-          <p class="proof">Singapore Energy Market integrations</p>
+          <h3>Energy &amp; utility domain depth</h3>
+          <p>Gas pipelines, market clearing, ETRM, contract settlement, outage management and DER enrollment. I understand the business from day one.</p>
+          <p class="proof">Singapore · NYISO · CENACE Mexico · N. America</p>
         </article>
         <article>
           <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span>
           <h3>Production .NET &amp; SQL Server</h3>
-          <p>C#, ASP.NET Core, Web API, WCF and Ext JS on live platforms where a mistake costs real money. Strong at SQL performance tuning.</p>
-          <p class="proof">Hangfire · Apache Ignite · Elasticsearch</p>
+          <p>C#, ASP.NET Core, Web API, WCF/SoapCore and Ext JS on live, regulated platforms. Deep SQL Server: tuning, partitioning, CDC.</p>
+          <p class="proof">Hangfire · Kafka · SQL CDC · SoapCore · gRPC</p>
+        </article>
+        <article>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><path d="M16 4a3.5 3.5 0 0 1 0 7M18 14.6c2 .7 3.2 2.6 3.6 5.4"/></svg></span>
+          <h3>Lead who still codes</h3>
+          <p>Led 20–25 engineers: LLD from functional specs, task allocation, code reviews, PMO/QA/offshore coordination, production support and releases.</p>
+          <p class="proof">6 promotions in 17 years</p>
         </article>
         <article>
           <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 17.5h7M17.5 14v7"/></svg></span>
-          <h3>Modern architecture, hands-on</h3>
-          <p>In 2026 I built a nine-service Kafka platform and deployed it to AWS, plus gRPC microservices and AI agent tooling.</p>
-          <p class="proof">Kafka · MongoDB · Redis · Docker · AWS</p>
+          <h3>Modernization, hands-on</h3>
+          <p>Moved SSIS pipelines to C# services with Hangfire and CDC at OATI. In 2026, built a nine-service Kafka platform and deployed it to AWS.</p>
+          <p class="proof">Microservices · Kafka · Docker · AWS · Azure</p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="oati">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">Career at OATI</p><h2>17 years, 9 products, 6 promotions.</h2></div>
+        <p>Open Access Technology India (OATI), Mohali: energy and utility market software for clients in North America and South-East Asia. Pick a product to see what I did.</p>
+      </div>
+
+      <div class="markets" aria-label="Markets and clients served">
+        <span class="mk"><b>SG</b>Singapore Energy Market · Keppel Electric</span>
+        <span class="mk"><b>US</b>NYISO · New York grid operations</span>
+        <span class="mk"><b>MX</b>CENACE · Mexico</span>
+        <span class="mk"><b>NA</b>Gas pipelines &amp; utilities</span>
+      </div>
+
+      <div class="oati-grid">
+        <div class="panel">
+          <p class="label">Promotions</p>
+          <div class="ladder" id="ladder"></div>
+        </div>
+
+        <div class="panel">
+          <p class="label">Product timeline</p>
+          <div class="gantt-wrap"><div class="gantt" id="gantt" role="tablist" aria-label="OATI products"></div></div>
+          <p class="g-hint">Overlapping bars ran in parallel. Click a product, or use the arrow keys.</p>
+        </div>
+
+        <div class="panel detail" id="detail" role="tabpanel" aria-live="polite"></div>
+
+        <div class="two">
+          <div class="panel"><p class="label">How I work</p><ul>
+            <li>Read the functional spec, write the low-level design, then break it into tasks the team can own.</li>
+            <li>Design for retries, idempotency and replay from day one.</li>
+            <li>Review code for consistency, and stay hands-on in the hardest module.</li>
+            <li>Keep PMO, QA and offshore teams in the loop through to release.</li>
+          </ul></div>
+          <div class="panel"><p class="label">Education</p><p><b>MCA</b>, Punjabi University, Patiala · 2008</p>
+            <p class="label" style="margin-top:20px;margin-bottom:10px">Since Feb 2026</p><p class="muted">Building portfolio platforms and upskilling in GenAI and cloud (Azure, AWS).</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -423,8 +530,8 @@ dialog::backdrop{background:color-mix(in srgb,#000 50%,transparent);backdrop-fil
   <section class="block" id="work">
     <div class="wrap">
       <div class="sec-head">
-        <div><p class="label">Projects</p><h2>Things I've built, and their real status.</h2></div>
-        <p>Each card shows whether it's live, working code, or in progress. Open one for the architecture, design decisions and stack.</p>
+        <div><p class="label">Personal projects · 2026</p><h2>Built on my own, with their real status.</h2></div>
+        <p>Separate from my OATI work. Each card shows whether it's live, working code, or in progress. Open one for the architecture and design decisions.</p>
       </div>
       <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
       <div class="grid" id="grid"></div>
@@ -436,7 +543,7 @@ dialog::backdrop{background:color-mix(in srgb,#000 50%,transparent);backdrop-fil
       <div>
         <p class="label">Live demo</p>
         <h2>Watch one trade flow through my platform.</h2>
-        <p style="color:var(--muted);margin-top:14px">An in-browser simulation of GridTrade Lite's real message path. Try it:</p>
+        <p class="muted" style="margin-top:14px">An in-browser simulation of GridTrade Lite's real message path. Try it:</p>
         <ol>
           <li>Press <b>Capture a trade</b> and follow it from the console to settlement.</li>
           <li>Tick <b>Make settlement fail once</b> to see the dead-letter queue and replay.</li>
@@ -464,51 +571,42 @@ dialog::backdrop{background:color-mix(in srgb,#000 50%,transparent);backdrop-fil
     </div>
   </section>
 
-  <section class="block" id="domain">
-    <div class="wrap">
-      <div class="sec-head">
-        <div><p class="label">Domain</p><h2>I know what happens to a trade after someone clicks “submit”.</h2></div>
-        <p>Most of my career sits inside the energy trade lifecycle. Pick a stage to see what it involves and where my work fits.</p>
-      </div>
-      <div class="life">
-        <div class="life-tabs" role="tablist" id="lifeTabs"></div>
-        <div class="life-body" id="lifeBody"></div>
-      </div>
-    </div>
-  </section>
-
   <section class="block" id="skills">
     <div class="wrap">
       <div class="sec-head">
         <div><p class="label">Skills</p><h2>Sorted by how I've used them.</h2></div>
-        <p>Years in production, built in my own projects, or learning now. Click a skill to see where it shows up.</p>
+        <p>Production work at OATI, my own projects, what I'm learning now, and how I lead. Click a skill to see where it shows up.</p>
       </div>
       <div class="levels" id="levels"></div>
-      <div class="used" id="used" aria-live="polite">Select a skill above to see which projects use it.</div>
+      <div class="used" id="used" aria-live="polite">Select a skill above to see where I used it.</div>
     </div>
   </section>
 
-  <section class="block" id="career">
+  <section class="block" id="verified">
     <div class="wrap">
       <div class="sec-head">
-        <div><p class="label">Experience</p><h2>17+ years at one energy-trading software company.</h2></div>
-        <p>Open Access Technology India (OATI), a provider of energy trading and grid software. June 2008 to January 2026.</p>
+        <div><p class="label">Verified</p><h2>Independently verified employment.</h2></div>
+        <p>A background check by HireSure confirmed my employment at OATI directly with the company, plus my identity.</p>
       </div>
-      <div class="career">
-        <ol class="tl">
-          <li class="now"><span class="when">2026 → now</span><h3>Independent: building &amp; upskilling</h3><p class="org">Portfolio platforms · GenAI · Cloud</p><p>Built GridTrade Lite end to end and deployed it to AWS. Building an Ext JS to React migration agent and an AI agent platform. Studying GenAI engineering and Azure AI.</p></li>
-          <li><span class="when">Last ~4 years at OATI</span><h3>Sr. Development Manager</h3><p class="org">OATI · Senior hands-on technical role</p><p>Design, complex market integrations, performance tuning across the application and database layers, and code review.</p></li>
-          <li><span class="when">Middle years</span><h3>.NET Full-Stack Engineer</h3><p class="org">OATI · Energy trading platforms</p><p>C#, ASP.NET, Web API, WCF and Ext JS. Singapore Energy Market integrations covering trade capture, scheduling and settlement. Hangfire jobs, Apache Ignite caching, Elasticsearch search.</p></li>
-          <li><span class="when">June 2008 →</span><h3>Enterprise foundation</h3><p class="org">OATI · SQL Server &amp; application support</p><p>T-SQL, data investigation, XML/XSLT. That database grounding still shapes how I design services.</p></li>
-        </ol>
-        <div class="side">
-          <div class="panel"><p class="label">How I work</p><ul>
-            <li>Understand the business flow and its failure modes before picking technology.</li>
-            <li>Design for retries, idempotency and replay from day one.</li>
-            <li>Prove an idea with a thin vertical slice, then grow it.</li>
-            <li>Be clear about what is finished and what isn't.</li>
-          </ul></div>
-          <div class="panel"><p class="label">Education</p><p><b>MCA</b>, Punjabi University, Patiala · 2008</p></div>
+      <div class="verify">
+        <div class="cert">
+          <div class="cert-head">
+            <span class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+            <div><h3>Employment verified</h3><p class="muted" style="font-size:.9rem">Status: Verified · no discrepancy</p></div>
+          </div>
+          <dl>
+            <dt>Employer</dt><dd>Open Access Technology India Pvt. Ltd., Mohali</dd>
+            <dt>Designation</dt><dd>Sr. Development Manager</dd>
+            <dt>Tenure</dt><dd class="tnum">2 Jun 2008 – 30 Jan 2026</dd>
+            <dt>Method</dt><dd>Employment certificate, confirmed with the employer by email</dd>
+            <dt>Verified by</dt><dd>HireSure (Experience Analytics India Pvt. Ltd.) · 21 Sep 2026</dd>
+          </dl>
+          <div class="cert-actions" id="certActions"></div>
+        </div>
+        <div class="checks">
+          <div class="panel"><span class="tick">✓</span><div><h3>ID proof verified</h3><p>Electronic PAN verification, completed 17 Sep 2026.</p></div></div>
+          <div class="panel"><span class="tick">✓</span><div><h3>Employment verified</h3><p>OATI confirmed role and dates, completed 21 Sep 2026.</p></div></div>
+          <div class="panel"><span class="tick" aria-hidden="true">i</span><div><h3>Full report on request</h3><p>The full report includes personal details, so I share it directly with hiring teams.</p></div></div>
         </div>
       </div>
     </div>
@@ -528,6 +626,12 @@ dialog::backdrop{background:color-mix(in srgb,#000 50%,transparent);backdrop-fil
         <div class="contact-links" id="contactLinks"></div>
       </div>
     </section>
+
+    <div class="host" id="hosting">
+      <span class="az" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 18h10.5a4.5 4.5 0 0 0 .6-8.96A6 6 0 0 0 6.6 10.1 4 4 0 0 0 7 18z"/></svg></span>
+      <div><b>About this site.</b> <p>A static site with no framework, deployed through GitHub Actions to <b>Azure Static Web Apps</b> with security headers set in its config, and mirrored on <b>GitHub Pages</b>.</p></div>
+      <div class="host-links" id="hostLinks"></div>
+    </div>
   </div>
 </main>
 
@@ -535,12 +639,12 @@ dialog::backdrop{background:color-mix(in srgb,#000 50%,transparent);backdrop-fil
 
 <nav class="mbar" aria-label="Quick actions">
   <button class="btn btn-primary" data-copy-email>Copy email</button>
-  <a class="btn" href="#work">Projects</a>
+  <a class="btn" href="#oati">Career</a>
 </nav>
 
 <dialog id="dlg" aria-labelledby="dlgTitle"></dialog>
 <dialog id="palette" aria-label="Quick search">
-  <input class="pal-in" id="palIn" placeholder="Jump to a section or project…" autocomplete="off" aria-label="Search">
+  <input class="pal-in" id="palIn" placeholder="Jump to a section, OATI product or project…" autocomplete="off" aria-label="Search">
   <ul class="pal-list" id="palList" role="listbox"></ul>
   <div class="pal-foot">↑ ↓ to move · Enter to open · Esc to close</div>
 </dialog>
@@ -548,12 +652,61 @@ dialog::backdrop{background:color-mix(in srgb,#000 50%,transparent);backdrop-fil
 <script>
 /* ======= EDIT ME: your links. Leave a value empty ('') to hide that button. ======= */
 const CONFIG = {
-  email:    'susheelkumar.mca@gmail.com',
-  linkedin: '',            // e.g. 'https://www.linkedin.com/in/your-handle'
-  github:   '',            // e.g. 'https://github.com/your-handle'
-  resume:   ''             // e.g. 'resume.pdf' (put the file next to index.html)
+  email:     'susheelkumar.mca@gmail.com',
+  linkedin:  '',   // e.g. 'https://www.linkedin.com/in/your-handle'
+  github:    'https://github.com/susheelkumar-dev',
+  resume:    '',   // e.g. 'resume.pdf' (put the file next to index.html)
+  azureUrl:  'https://delightful-plant-00789ea10.4.azurestaticapps.net/',
+  pagesUrl:  'https://susheelkumar-dev.github.io/',
+  verifyUrl: 'https://app.hiresure.compup.io/verify_bgv_report/2v87d52h',  // HireSure's own verification page
+  reportUrl: ''    // full PDF report link. Left empty on purpose: it shows DOB, part of PAN and your manager's contact details.
 };
 
+/* ---------- OATI products (from my career summary) ---------- */
+const OATI = [
+  { id:'webmarket', name:'webMarket', years:'2008 – 2010', s:2008.42, e:2010.15, role:'Software Developer', market:'Energy markets',
+    what:'My first OATI product, where I learned the platform from the database up.',
+    did:['Started with bug fixes in existing code to learn the architecture: SQL procedures, functions and SQL jobs','Worked issues through OATI’s Problem Reporting Tool lifecycle, including code deployments','Helped prepare and run test plans, and supported teammates on technical issues'],
+    stack:['SQL Server','T-SQL','SQL Agent jobs'] },
+  { id:'webintel', name:'webIntelligence', years:'2010 – 2013', s:2010.15, e:2013.0, role:'Group Lead (from Feb 2010)', market:'Forecasting & market data',
+    what:'Imported data from external systems, processed it into datasets with internal logic, and used them to generate forecasts, for example with AccuWeather data.',
+    did:['Developed and optimized applications in WebPlus/ODG (OATI’s proprietary language) and SQL Server, including Summary and Entry screens','Built UI components with JavaScript, XML and XSLT that rendered SQL Server results as HTML for Audit Trail and reporting','Built deep SQL Server expertise: stored procedures, UDFs, views, table partitioning and query tuning'],
+    stack:['SQL Server','WebPlus/ODG','JavaScript','XML/XSLT'] },
+  { id:'webpipeline', name:'webPipeline', years:'2013 – 2015 + support phase', s:2013.0, e:2015.0, role:'Sr. Group Lead → Project Lead (Nov 2014)', market:'N. American gas pipelines',
+    what:'Gas transmission and contract management: master data, contracts, nominations, scheduling, confirmation, invoicing and reporting between service providers and requesters.',
+    did:['Joined as team lead; worked daily with the US manager to understand requirements from functional specs','Built the system with C# and Silverlight: design, development, unit testing, code reviews and TFS check-ins','Allocated tasks based on team availability and expertise','Later support phase: designed the Reporting module (dynamic reports from user filters), scheduled reports with Hangfire, and adopted SoapCore as the WCF replacement'],
+    stack:['C#','Silverlight','SQL Server','TFS','Hangfire','SoapCore'] },
+  { id:'websmartmarket', name:'webSmartMarket', years:'2015 – 2017', s:2015.0, e:2017.0, role:'Project Lead → Sr. Project Lead (Apr 2017)', market:'Wholesale electricity markets',
+    what:'A market-clearing platform that matches bids and offers and supports end-to-end energy market operations.',
+    did:['Led the creation of the system, converting an existing product onto OATI’s then-new webVision framework','Built the Daily Bid Blotter and Transactions Display modules for creating and reviewing bids, viewing market outcomes and tracking transactions'],
+    stack:['C#','.NET','Ext JS (webVision)','SQL Server'] },
+  { id:'keppel', name:'Keppel Electric ETRM', years:'2017 – mid 2020', s:2017.0, e:2020.5, role:'Sr. Project Lead', market:'Singapore Energy Market',
+    what:'Energy trading and risk management for Keppel Electric Pte Ltd. It submits generation offers to the Singapore Energy Market and retrieves market clearing runs, advisories and settlement data for the optimization and risk layers.',
+    did:['Owned the Interface module, including status updates and code management','Designed and built SOAP/REST integrations with Singapore Energy Market systems in C#, WCF and Web API','Ingested data through Keppel’s endpoints and an intermediate system exposed by TechM','Built Hangfire background processing for high-throughput asynchronous data workflows','Wrote T-SQL procedures, functions and triggers; designed and optimized SQL Server schemas','Contributed to estimation, scheduling, resource planning and code reviews'],
+    stack:['C#','WCF','Web API','ASP.NET MVC','Hangfire','SQL Server','SOAP/REST'] },
+  { id:'websmartcontract', name:'webSmartContract', years:'2020 – 2022', s:2020.0, e:2022.0, role:'Sr. Project Lead → Development Manager (Sep 2021)', market:'CENACE · Mexico',
+    what:'Contract and settlement management for electricity market participants: contract lifecycle (load, generation, import, export), time-series metering and trade tracking. Demand bids pass risk limits and approvals, then go to CENACE; monthly settlement runs produce invoices and payment logs.',
+    did:['Analyzed functional specs and wrote the low-level design','Broke the design into tasks and allocated them within the team','Reviewed code and contributed as a hands-on developer'],
+    stack:['ASP.NET Core','Entity Framework','SQL Server','Hangfire','SoapCore','Angular','Caching'] },
+  { id:'websmartoms', name:'webSmartOMS · NYISO GOCP', years:'2021 – 2023', s:2021.0, e:2023.0, role:'Development Manager (from Sep 2021)', market:'NYISO · New York',
+    what:'Centralized outage management for transmission, distribution and generation. I worked on NYISO’s Grid Operations Coordination Portal, where DER aggregators, transmission owners and DSOs submit forced outages and Supplemental Resource Availability (SRA) requests.',
+    did:['Forced outage and SRA schedule entry, changes, ending and cancellation up to the next Day-Ahead Market','Role-based access for GO, TO and DSO schedulers and observers, limited to each user’s organization','Request workflow from New to Approved (manual or auto below a DMNC threshold), Denied, Cancelled and pending states','Validation of operating and storage limits (LOL, UOL, LSL, USL) against bid values from NYISO’s MIS','Built the Outage Display and OMS Configuration modules, the Audit Trail viewer and filterable reports','Implemented Kafka messaging between the UI and Processor applications'],
+    stack:['C#','.NET','Kafka','SQL Server'] },
+  { id:'webvision', name:'webVision framework', years:'2023 – 2024', s:2023.0, e:2024.0, role:'Development Manager', market:'Internal platform',
+    what:'OATI’s internal application framework on Ext JS and .NET, providing user and session management. It is the base for building OATI applications.',
+    did:['Researched gRPC for OATI products and built a proof of concept with adoption use cases','Upgraded the framework to a newer .NET version'],
+    stack:['.NET','Ext JS','gRPC'] },
+  { id:'derms', name:'webDistribute · DERMS Enrollment', years:'2024 – Jan 2026', s:2024.0, e:2026.08, role:'Development Manager → Sr. Development Manager (Apr 2025)', market:'Utility DER programs',
+    what:'Onboards customers, DER aggregators and third-party providers into utility programs for smart thermostats, batteries, solar, EVs and demand response. Enrolled assets feed forecasting, dispatch, performance tracking and settlement.',
+    did:['Modernized data ingestion, replacing legacy SSIS packages with server-side C# processing','Structured ingestion as independent microservice-style processes','Scheduled and monitored jobs with Hangfire: recurring schedules, retries and dashboard','Used SQL Server Change Data Capture for incremental processing instead of full loads'],
+    stack:['C#','.NET','Hangfire','SQL Server CDC','SSIS → C#','Microservices'] }
+];
+const PROMOS = [
+  ['Jun 2008','Software Developer'],['Feb 2010','Group Lead'],['Aug 2013','Sr. Group Lead'],['Nov 2014','Project Lead'],
+  ['Apr 2017','Sr. Project Lead'],['Sep 2021','Development Manager'],['Apr 2025','Sr. Development Manager']
+];
+
+/* ---------- personal projects ---------- */
 const PROJECTS = [
   { id:'gridtrade', name:'GridTrade Lite', cat:'Energy & trading', status:'live', statusLabel:'Live on AWS', featured:true,
     summary:'An enterprise-style energy trading platform: nine .NET services on Kafka, an Angular operations console, and bulk data ingestion with PySpark.',
@@ -570,80 +723,63 @@ const PROJECTS = [
     built:['A sample Ext JS single-page ETRM app as the source for the agent','Migration target uses my reusable React grid component','Designed to run fully offline on a local model, so source code never leaves the machine'],
     flow:['Ext JS source','Component inventory','Map to React equivalents','Generate code','Engineer review'],
     decisions:['Offline local model, since enterprise front-end code is often confidential','Human review stays in the loop; the agent produces a draft, not a release'],
-    stack:['Ext JS','React','Python','Local LLM','Code generation'],
-    links:{repo:''} },
+    stack:['Ext JS','React','Python','Local LLM','Code generation'], links:{repo:''} },
   { id:'grid', name:'Ext JS grid for React', cat:'Front end', status:'working', statusLabel:'Working code',
     summary:'The Ext JS data grid, ported as a reusable React component that Ext JS developers will find familiar.',
     problem:'The grid is the heart of most Ext JS business screens, and the hardest part to move to React without losing behaviour users depend on.',
     built:['Ext JS grid behaviour rebuilt as a reusable React component','Configured through column definitions, the way Ext JS developers expect','Used as the target component for the migration agent'],
     flow:['Ext JS grid config','Column model','React grid component','Reused in apps'],
     decisions:['Keep the configuration shape close to Ext JS so migrated screens map one-to-one'],
-    stack:['React','JavaScript','Ext JS'],
-    links:{repo:''} },
+    stack:['React','JavaScript','Ext JS'], links:{repo:''} },
   { id:'agents', name:'AI Agent Platform', cat:'AI & agents', status:'progress', statusLabel:'In progress',
     summary:'A framework for running AI agents as independently deployed services that plug into existing systems.',
     problem:'Teams that add agents to existing products end up with hard-coded wiring and no consistent way to register, govern or observe them.',
     built:['Python starter project and design documents','Agents register through manifests instead of hard-coded discovery','Each agent deploys and scales on its own, like a microservice'],
     flow:['Agent manifest','Registry','Capability contract','Agent service','Observability'],
     decisions:['Treat agents like microservices: own deployment, own contract, own lifecycle','Expose capabilities through explicit contracts so callers never depend on a specific agent'],
-    stack:['Python','FastAPI','LangGraph','Docker'],
-    links:{repo:''} },
+    stack:['Python','FastAPI','LangGraph','Docker'], links:{repo:''} },
   { id:'dotnetmicro', name:'DotNetMicroDemo', cat:'Distributed systems', status:'working', statusLabel:'Working code',
     summary:'Microservices mixing gRPC, REST and messaging, plus an AI gateway that hides which LLM provider sits behind it.',
     problem:'Show when to use synchronous gRPC, REST or asynchronous messaging, and how to add LLM features without tying the system to one vendor.',
     built:['ProductService exposed over gRPC','OrderService over REST, publishing events through RabbitMQ and MassTransit','AIGatewayService with an LLM abstraction layer'],
     flow:['Client','OrderService (REST)','ProductService (gRPC)','RabbitMQ','AIGatewayService'],
     decisions:['gRPC for fast internal calls, REST at the edge, messaging for anything that can be async','One gateway for LLM calls so models can be swapped without touching callers'],
-    stack:['.NET','gRPC','REST','RabbitMQ','MassTransit','LLM'],
-    links:{repo:''} },
+    stack:['.NET','gRPC','REST','RabbitMQ','MassTransit','LLM'], links:{repo:''} },
   { id:'strangler', name:'Monolith → microservices with gRPC', cat:'Distributed systems', status:'working', statusLabel:'Working code',
     summary:'A strangler-fig migration that carves services out of a monolith while the public API stays the same.',
     problem:'Big-bang rewrites fail. The safer path is to move one capability at a time while clients keep calling the same endpoints.',
     built:['ASP.NET Core monolith with capabilities extracted step by step','gRPC between internal services, REST as the public surface','Routing that sends each call to the monolith or the new service'],
     flow:['Client (REST)','Facade / router','Monolith','Extracted service (gRPC)'],
     decisions:['Strangler fig so every step is shippable and reversible','Public REST contract stays stable while internals change'],
-    stack:['ASP.NET Core','gRPC','REST','C#'],
-    links:{repo:''} }
+    stack:['ASP.NET Core','gRPC','REST','C#'], links:{repo:''} }
 ];
 
 const SKILLS = [
-  { level:'Production', color:'var(--ok)', note:'Used at work, on live trading platforms, for years.',
-    items:['C#','.NET Core','ASP.NET Core','Web API','SQL Server','T-SQL','Entity Framework','Ext JS','WCF','Hangfire','Apache Ignite','Elasticsearch','Azure DevOps','Git'] },
-  { level:'Built in projects', color:'var(--blue)', note:'Hands-on in my own platforms, with code to show.',
-    items:['Angular','React','Kafka','MongoDB','Redis','gRPC','RabbitMQ','MassTransit','YARP','Docker','AWS EC2','PySpark'] },
+  { level:'Production at OATI', color:'var(--ok)', note:'Used on live energy and utility platforms.',
+    items:['C#','.NET / .NET Core','ASP.NET Core','ASP.NET MVC','Web API','Entity Framework','WCF','SoapCore','SQL Server','T-SQL','SQL Server CDC','SSIS','Hangfire','Kafka','Angular','Ext JS','Silverlight','JavaScript','XML/XSLT','Git'] },
+  { level:'Built in my projects', color:'var(--blue)', note:'Hands-on in my own platforms, with code to show.',
+    items:['React','gRPC','MongoDB','Redis','RabbitMQ','MassTransit','YARP','Docker','PySpark','AWS EC2','Azure Static Web Apps','GitHub Actions'] },
+  { level:'Leadership & delivery', color:'var(--ink)', note:'Last 7–8 years at OATI, team of 20–25.',
+    items:['LLD from functional specs','Task breakdown & allocation','Code reviews','PMO / QA / offshore coordination','Production support','Release management','Estimation & scheduling'] },
   { level:'Learning now', color:'var(--accent)', note:'Actively studying and applying in current projects.',
     items:['Python','FastAPI','LangGraph','RAG','Azure OpenAI','Semantic Kernel','MCP'] }
 ];
-const SKILL_USE = {
-  'C#':['gridtrade','dotnetmicro','strangler'], '.NET Core':['gridtrade','dotnetmicro','strangler'], 'ASP.NET Core':['strangler','dotnetmicro'],
-  'SQL Server':['gridtrade'], 'Hangfire':['gridtrade'], 'Ext JS':['migration','grid'], 'Angular':['gridtrade'], 'React':['migration','grid'],
-  'Kafka':['gridtrade'], 'MongoDB':['gridtrade'], 'Redis':['gridtrade'], 'gRPC':['dotnetmicro','strangler'], 'RabbitMQ':['dotnetmicro'],
-  'MassTransit':['dotnetmicro'], 'YARP':['gridtrade'], 'Docker':['gridtrade','agents'], 'AWS EC2':['gridtrade'], 'PySpark':['gridtrade'],
-  'Python':['agents','migration'], 'FastAPI':['agents'], 'LangGraph':['agents']
+/* where each skill shows up: o = OATI products, p = personal projects */
+const USE = {
+  'C#':{o:['webpipeline','keppel','websmartoms','derms'],p:['gridtrade','dotnetmicro','strangler']},
+  '.NET / .NET Core':{o:['websmartcontract','webvision','derms'],p:['gridtrade','dotnetmicro']},
+  'ASP.NET Core':{o:['websmartcontract'],p:['strangler','dotnetmicro']}, 'ASP.NET MVC':{o:['keppel']}, 'Web API':{o:['keppel']},
+  'Entity Framework':{o:['websmartcontract']}, 'WCF':{o:['keppel']}, 'SoapCore':{o:['websmartcontract','webpipeline']},
+  'SQL Server':{o:['webmarket','webintel','keppel','websmartcontract','derms'],p:['gridtrade']}, 'T-SQL':{o:['webmarket','webintel','keppel']},
+  'SQL Server CDC':{o:['derms']}, 'SSIS':{o:['derms']}, 'Hangfire':{o:['keppel','websmartcontract','webpipeline','derms'],p:['gridtrade']},
+  'Kafka':{o:['websmartoms'],p:['gridtrade']}, 'Angular':{o:['websmartcontract'],p:['gridtrade']}, 'Ext JS':{o:['webvision','websmartmarket'],p:['migration','grid']},
+  'Silverlight':{o:['webpipeline']}, 'JavaScript':{o:['webintel'],p:['grid']}, 'XML/XSLT':{o:['webintel']},
+  'React':{p:['migration','grid']}, 'gRPC':{o:['webvision'],p:['dotnetmicro','strangler']}, 'MongoDB':{p:['gridtrade']}, 'Redis':{p:['gridtrade']},
+  'RabbitMQ':{p:['dotnetmicro']}, 'MassTransit':{p:['dotnetmicro']}, 'YARP':{p:['gridtrade']}, 'Docker':{p:['gridtrade','agents']},
+  'PySpark':{p:['gridtrade']}, 'AWS EC2':{p:['gridtrade']}, 'Python':{p:['agents','migration']}, 'FastAPI':{p:['agents']}, 'LangGraph':{p:['agents']},
+  'LLD from functional specs':{o:['websmartcontract','keppel']}, 'Task breakdown & allocation':{o:['websmartcontract','webpipeline']},
+  'Code reviews':{o:['webpipeline','keppel','websmartcontract']}, 'Estimation & scheduling':{o:['keppel']}
 };
-
-const LIFE = [
-  { k:'capture', n:'Capture', h:'Trade capture',
-    what:'A deal is entered or received, validated against limits and reference data, and becomes the single source of truth everything downstream depends on.',
-    terms:['Deal ticket','Counterparty','Limits'],
-    mine:['Built trade-capture workflows for Singapore Energy Market integrations','GridTrade Lite: Trading service writes trades and events atomically through an outbox'] },
-  { k:'schedule', n:'Schedule', h:'Scheduling',
-    what:'Trades turn into physical schedules per trading period. In Singapore that means 48 half-hour periods every day, each with its own quantities and deadlines.',
-    terms:['48 periods / day','Nominations','Gate closure'],
-    mine:['Scheduling workflows for Singapore market integrations','Background processing with Hangfire for time-bound jobs'] },
-  { k:'meter', n:'Meter', h:'Metering & ingestion',
-    what:'Meter reads arrive in bulk, often as files. They must be validated, de-duplicated and matched to the right asset and premise before anyone can be paid.',
-    terms:['Interval data','Soft / hard rules','Bulk CSV'],
-    mine:['GridTrade Lite: bulk CSV ingestion with soft and hard validation, run through PySpark and tracked in Hangfire','Asset registry linking devices to premise and location data'] },
-  { k:'settle', n:'Settle', h:'Settlement',
-    what:'Scheduled and metered quantities are priced per period and turned into amounts owed. Errors here are money, so every step must be repeatable and auditable.',
-    terms:['Price × quantity','Invoices','Re-runs'],
-    mine:['Settlement workflows for Singapore market integrations','GridTrade Lite: settlement consumer with idempotent inbox, DLQ and replay'] },
-  { k:'audit', n:'Reconcile', h:'Reconciliation & audit',
-    what:'Internal numbers are checked against market statements, and every change is traceable. Regulators and finance teams both depend on this trail.',
-    terms:['Statements','Audit trail','Disputes'],
-    mine:['SQL Server performance tuning and data investigation on large trading datasets','GridTrade Lite: Audit service records every event that crosses Kafka'] }
-];
 
 /* ---------- helpers ---------- */
 const $ = s => document.querySelector(s);
@@ -651,7 +787,9 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':
 const store = { get(k){try{return localStorage.getItem(k)}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,v)}catch(e){}} };
 function toast(msg){ const t=document.createElement('div'); t.className='toast'; t.setAttribute('role','status'); t.textContent=msg; document.body.appendChild(t); setTimeout(()=>t.remove(),2000); }
 const byId = id => PROJECTS.find(p=>p.id===id);
+const oById = id => OATI.find(p=>p.id===id);
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const smooth = reduce ? 'auto' : 'smooth';
 
 /* ---------- theme ---------- */
 (function(){ const saved=store.get('theme'); if(saved) document.documentElement.dataset.theme=saved; })();
@@ -659,11 +797,11 @@ function isDark(){ const t=document.documentElement.dataset.theme; return t ? t=
 function toggleTheme(){ const next=isDark()?'light':'dark'; document.documentElement.dataset.theme=next; store.set('theme',next); }
 $('#themeBtn').onclick = toggleTheme;
 
-/* ---------- contact ---------- */
+/* ---------- contact & links ---------- */
 $('#emailText').textContent = CONFIG.email;
 async function copyEmail(){
   try{ await navigator.clipboard.writeText(CONFIG.email); toast('Email copied: '+CONFIG.email); }
-  catch(e){ const r=document.createRange(); r.selectNodeContents($('#emailText')); const s=getSelection(); s.removeAllRanges(); s.addRange(r); $('#contact').scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'}); toast('Email selected. Press Ctrl+C to copy'); }
+  catch(e){ const r=document.createRange(); r.selectNodeContents($('#emailText')); const s=getSelection(); s.removeAllRanges(); s.addRange(r); $('#contact').scrollIntoView({behavior:smooth,block:'center'}); toast('Email selected. Press Ctrl+C to copy'); }
 }
 document.querySelectorAll('[data-copy-email]').forEach(b=>b.addEventListener('click',copyEmail));
 const ext = (href,label,cls='btn') => `<a class="${cls}" href="${esc(href)}" target="_blank" rel="noopener">${label}</a>`;
@@ -675,9 +813,54 @@ if (CONFIG.resume){
   cl.insertAdjacentHTML('beforeend', `<a href="${esc(CONFIG.resume)}" download>Résumé (PDF)</a>`);
   pa.insertAdjacentHTML('beforeend', `<a class="btn wide" href="${esc(CONFIG.resume)}" download>Download résumé</a>`);
 }
-/* keep the button grid tidy: an odd extra button spans the row */
-(function(){ const extra=[...pa.children].filter(x=>!x.classList.contains('wide')); if(extra.length===1) extra[0].classList.add('wide'); })();
+(function(){ const extra=[...pa.children].filter(x=>!x.classList.contains('wide')); if(extra.length%2===1) extra[extra.length-1].classList.add('wide'); })();
+const ca=$('#certActions');
+if (CONFIG.verifyUrl) ca.insertAdjacentHTML('beforeend', ext(CONFIG.verifyUrl,'Verify on HireSure ↗','btn btn-primary'));
+if (CONFIG.reportUrl) ca.insertAdjacentHTML('beforeend', ext(CONFIG.reportUrl,'View full report ↗'));
+ca.insertAdjacentHTML('beforeend', `<button class="btn" data-copy-email>Request full report</button>`);
+ca.querySelector('[data-copy-email]').addEventListener('click',copyEmail);
+const hl=$('#hostLinks');
+if (CONFIG.azureUrl) hl.insertAdjacentHTML('beforeend', ext(CONFIG.azureUrl,'Azure Static Web Apps ↗','btn btn-primary'));
+if (CONFIG.pagesUrl) hl.insertAdjacentHTML('beforeend', ext(CONFIG.pagesUrl,'GitHub Pages ↗'));
 $('#yr').textContent = new Date().getFullYear();
+
+/* ---------- OATI: ladder ---------- */
+$('#ladder').innerHTML = PROMOS.map(([d,t],i)=>{
+  const h=40+i*22, a=18+i*12, top=i===PROMOS.length-1;
+  return `<div class="step${top?' top':''}"><div class="bar-v" style="--h:${h}px;--a:${a}%"></div><div><strong>${esc(t)}</strong><small class="tnum">${esc(d)}</small></div></div>`;
+}).join('');
+
+/* ---------- OATI: gantt ---------- */
+const Y0=2008, Y1=2026.7, pct=y=>((y-Y0)/(Y1-Y0)*100);
+const gantt=$('#gantt');
+let axis='<div></div><div class="g-axis">';
+for(let y=2008;y<=2026;y+=2) axis+=`<span style="left:${pct(y)}%">${y}</span>`;
+axis+='</div>';
+gantt.innerHTML = axis + OATI.map((p,i)=>{
+  const prev=OATI[i-1]; const ov = prev && p.s < prev.e - .01;
+  return `<div class="g-row" data-id="${p.id}">
+    <button class="g-name" role="tab" id="gt-${p.id}" aria-controls="detail" tabindex="-1">${esc(p.name)}<small>${esc(p.years)}</small></button>
+    <button class="g-track" tabindex="-1" aria-hidden="true"><span class="g-bar${ov?' overlap':''}" style="left:${pct(p.s)}%;width:${pct(p.e)-pct(p.s)}%"></span></button>
+  </div>`; }).join('');
+gantt.querySelectorAll('.g-row').forEach(r=>r.querySelectorAll('button').forEach(b=>b.onclick=()=>selectOati(r.dataset.id)));
+let curO=null;
+function selectOati(id, focus){
+  const p=oById(id); if(!p) return; curO=id;
+  gantt.querySelectorAll('.g-row').forEach(r=>{ const on=r.dataset.id===id; r.classList.toggle('sel',on); const b=r.querySelector('.g-name'); b.setAttribute('aria-selected',on); b.tabIndex=on?0:-1; });
+  $('#detail').innerHTML = `<div><p class="label">OATI product · ${esc(p.years)}</p><h3 style="margin-top:8px">${esc(p.name)}</h3>
+      <div class="chips"><span class="chip-s">${esc(p.role)}</span><span class="chip-s b">${esc(p.market)}</span></div>
+      <p>${esc(p.what)}</p></div>
+    <div><p class="label" style="margin-bottom:10px">What I did</p><ul>${p.did.map(d=>`<li>${esc(d)}</li>`).join('')}</ul>
+      <p class="label" style="margin:16px 0 8px">Stack</p><div class="stack">${p.stack.map(s=>`<span>${esc(s)}</span>`).join('')}</div></div>`;
+  if(focus) $('#gt-'+id).focus();
+}
+gantt.addEventListener('keydown',e=>{
+  if(!['ArrowDown','ArrowUp','ArrowRight','ArrowLeft'].includes(e.key)) return;
+  e.preventDefault(); const i=OATI.findIndex(p=>p.id===curO); const d=(e.key==='ArrowDown'||e.key==='ArrowRight')?1:-1;
+  selectOati(OATI[(i+d+OATI.length)%OATI.length].id, true);
+});
+selectOati('derms');
+function showOati(id){ selectOati(id); $('#oati').scrollIntoView({behavior:smooth}); setTimeout(()=>$('#detail').scrollIntoView({behavior:smooth,block:'center'}), reduce?0:400); }
 
 /* ---------- trading period (SGT, 48 half-hours) ---------- */
 function updatePeriod(){
@@ -767,25 +950,7 @@ async function runTrade(){
 $('#runBtn').onclick = runTrade;
 line('', 'ready · press “Capture a trade”');
 
-/* ---------- domain lifecycle ---------- */
-const tabs=$('#lifeTabs');
-LIFE.forEach((s,i)=>{
-  const b=document.createElement('button'); b.className='life-tab'; b.setAttribute('role','tab'); b.id='tab-'+s.k;
-  b.setAttribute('aria-controls','lifeBody'); b.innerHTML=`<small>Step ${i+1}</small><span>${s.n}</span>`; b.onclick=()=>showLife(i); tabs.appendChild(b);
-});
-function showLife(i){
-  const s=LIFE[i];
-  tabs.querySelectorAll('.life-tab').forEach((b,j)=>{ b.setAttribute('aria-selected', j===i); b.tabIndex = j===i?0:-1; });
-  $('#lifeBody').innerHTML = `<div><h3>${s.h}</h3><p>${s.what}</p><div style="margin-top:14px">${s.terms.map(t=>`<span class="term">${t}</span>`).join('')}</div></div>
-    <div><p class="label">Where my work fits</p><ul>${s.mine.map(m=>`<li>${m}</li>`).join('')}</ul></div>`;
-}
-tabs.addEventListener('keydown', e=>{
-  const cur=LIFE.findIndex(s=>$('#tab-'+s.k).getAttribute('aria-selected')==='true');
-  if(e.key==='ArrowRight'||e.key==='ArrowLeft'){ const n=(cur+(e.key==='ArrowRight'?1:-1)+LIFE.length)%LIFE.length; showLife(n); $('#tab-'+LIFE[n].k).focus(); }
-});
-showLife(0);
-
-/* ---------- projects ---------- */
+/* ---------- personal projects ---------- */
 const CATS=['All', ...new Set(PROJECTS.map(p=>p.cat))];
 let activeCat=store.get('cat'); if(!CATS.includes(activeCat)) activeCat='All';
 function renderFilters(){
@@ -796,14 +961,14 @@ function renderFilters(){
 function renderGrid(){
   const list = activeCat==='All' ? PROJECTS : PROJECTS.filter(p=>p.cat===activeCat);
   $('#grid').innerHTML = list.map(p=>{
-    const feat = p.featured && activeCat==='All';
+    const feat = p.featured && activeCat==='All', n=feat?8:5;
     return `<button class="card${feat?' featured':''}" data-id="${p.id}">
       <div class="card-top"><span class="label">${esc(p.cat)}${feat?' · Featured':''}</span><span class="status s-${p.status}">${esc(p.statusLabel)}</span></div>
       <h3>${esc(p.name)}</h3>
       <p>${esc(p.summary)}</p>
       ${feat&&p.highlights?`<ul class="hl">${p.highlights.map(h=>`<li>${esc(h)}</li>`).join('')}</ul>
         <div class="feat-flow"><p class="label">Request path</p><div class="flow">${p.flow.map(x=>`<span>${esc(x)}</span>`).join('<i>→</i>')}</div></div>`:''}
-      <div class="stack">${p.stack.slice(0,feat?8:5).map(s=>`<span>${esc(s)}</span>`).join('')}${p.stack.length>(feat?8:5)?`<span>+${p.stack.length-(feat?8:5)}</span>`:''}</div>
+      <div class="stack">${p.stack.slice(0,n).map(s=>`<span>${esc(s)}</span>`).join('')}${p.stack.length>n?`<span>+${p.stack.length-n}</span>`:''}</div>
       <span class="card-more">See architecture &amp; decisions →</span>
     </button>`; }).join('');
   $('#grid').querySelectorAll('.card').forEach(c=>c.onclick=()=>openProject(c.dataset.id));
@@ -811,8 +976,8 @@ function renderGrid(){
 const dlg=$('#dlg');
 function openProject(id){
   const p=byId(id); if(!p) return;
-  const links=[]; if(p.links.demo) links.push(`<a class="btn btn-primary" href="${esc(p.links.demo)}" target="_blank" rel="noopener">Open live demo ↗</a>`);
-  if(p.links.repo) links.push(`<a class="btn" href="${esc(p.links.repo)}" target="_blank" rel="noopener">View code ↗</a>`);
+  const links=[]; if(p.links.demo) links.push(ext(p.links.demo,'Open live demo ↗','btn btn-primary'));
+  if(p.links.repo) links.push(ext(p.links.repo,'View code ↗'));
   dlg.innerHTML = `
     <div class="dlg-head"><div><span class="status s-${p.status}">${esc(p.statusLabel)}</span><h2 id="dlgTitle">${esc(p.name)}</h2></div>
       <button class="close" aria-label="Close" id="dlgClose">✕</button></div>
@@ -838,33 +1003,35 @@ document.querySelectorAll('.skill').forEach(b=>b.onclick=()=>{
   const was=b.getAttribute('aria-pressed')==='true';
   document.querySelectorAll('.skill').forEach(x=>x.setAttribute('aria-pressed','false'));
   const used=$('#used');
-  if(was){ used.textContent='Select a skill above to see which projects use it.'; return; }
+  if(was){ used.textContent='Select a skill above to see where I used it.'; return; }
   b.setAttribute('aria-pressed','true');
-  const s=b.dataset.skill, ids=SKILL_USE[s]||[], atWork=SKILLS[0].items.includes(s);
-  const parts=[];
-  if(atWork) parts.push('years of production use at OATI');
-  if(ids.length) parts.push('projects: '+ids.map(id=>`<button data-open="${id}">${esc(byId(id).name)}</button>`).join(', '));
-  used.innerHTML = `<b>${esc(s)}</b> · ${parts.length?parts.join(' · '):'currently studying; it will show up in upcoming project work.'}`;
+  const s=b.dataset.skill, u=USE[s]||{}, parts=[];
+  if(u.o&&u.o.length) parts.push('At OATI: '+u.o.map(id=>`<button data-oati="${id}">${esc(oById(id).name)}</button>`).join(', '));
+  if(u.p&&u.p.length) parts.push('My projects: '+u.p.map(id=>`<button data-open="${id}">${esc(byId(id).name)}</button>`).join(', '));
+  const lvl=SKILLS.find(l=>l.items.includes(s));
+  used.innerHTML = `<b>${esc(s)}</b> · ${parts.length?parts.join(' · '):esc(lvl.note)}`;
   used.querySelectorAll('[data-open]').forEach(x=>x.onclick=()=>openProject(x.dataset.open));
+  used.querySelectorAll('[data-oati]').forEach(x=>x.onclick=()=>showOati(x.dataset.oati));
 });
 
 /* ---------- nav highlight ---------- */
 const navLinks=[...document.querySelectorAll('.nav a')];
 const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ navLinks.forEach(a=>a.classList.toggle('on', a.getAttribute('href')==='#'+e.target.id)); } }),{rootMargin:'-45% 0px -50% 0px'});
-['why','work','demo','domain','skills','career','contact'].forEach(id=>io.observe(document.getElementById(id)));
+['why','oati','work','demo','skills','verified','contact'].forEach(id=>io.observe(document.getElementById(id)));
 
 /* ---------- command palette ---------- */
 const pal=$('#palette'), palIn=$('#palIn'), palList=$('#palList');
-const go = id => ()=>{ pal.close(); document.getElementById(id).scrollIntoView({behavior:reduce?'auto':'smooth'}); };
+const go = id => ()=>{ pal.close(); document.getElementById(id).scrollIntoView({behavior:smooth}); };
 const CMDS = [
   {t:'Why hire me', k:'section', a:go('why')},
-  {t:'Projects', k:'section', a:go('work')},
-  {t:'Run the live trade demo', k:'demo', a:()=>{ pal.close(); $('.sim').scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'}); runTrade(); }},
-  {t:'Domain: energy trade lifecycle', k:'section', a:go('domain')},
-  {t:'Skills', k:'section', a:go('skills')},
-  {t:'Experience', k:'section', a:go('career')},
-  {t:'Contact', k:'section', a:go('contact')},
+  {t:'Career at OATI', k:'section', a:go('oati')},
+  ...OATI.map(p=>({t:p.name, k:'oati', a:()=>{ pal.close(); showOati(p.id); }})),
+  {t:'Personal projects', k:'section', a:go('work')},
   ...PROJECTS.map(p=>({t:p.name, k:'project', a:()=>{ pal.close(); openProject(p.id); }})),
+  {t:'Run the live trade demo', k:'demo', a:()=>{ pal.close(); $('.sim').scrollIntoView({behavior:smooth,block:'center'}); runTrade(); }},
+  {t:'Skills', k:'section', a:go('skills')},
+  {t:'Verified employment', k:'section', a:go('verified')},
+  {t:'Contact', k:'section', a:go('contact')},
   {t:'Copy email address', k:'action', a:()=>{ pal.close(); copyEmail(); }},
   {t:'Switch light / dark theme', k:'action', a:()=>{ pal.close(); toggleTheme(); }}
 ];
@@ -875,6 +1042,7 @@ function renderPal(){
   palSel=Math.min(palSel, Math.max(0,palItems.length-1));
   palList.innerHTML = palItems.length ? palItems.map((c,i)=>`<li role="option" aria-selected="${i===palSel}" class="${i===palSel?'sel':''}" data-i="${i}"><span>${esc(c.t)}</span><small>${c.k}</small></li>`).join('') : '<li><span>No matches</span></li>';
   palList.querySelectorAll('[data-i]').forEach(li=>li.onclick=()=>palItems[+li.dataset.i].a());
+  const s=palList.querySelector('.sel'); if(s) s.scrollIntoView({block:'nearest'});
 }
 function openPal(){ palIn.value=''; palSel=0; renderPal(); pal.showModal(); palIn.focus(); }
 $('#openPalette').onclick=openPal;
@@ -890,8 +1058,8 @@ document.addEventListener('keydown', e=>{
   if((e.key==='/' && !typing) || (e.key.toLowerCase()==='k' && (e.metaKey||e.ctrlKey))){ e.preventDefault(); if(!pal.open) openPal(); }
 });
 
-/* deep links: #gridtrade etc. open that project */
-if (location.hash && byId(location.hash.slice(1))) openProject(location.hash.slice(1));
+/* deep links: #gridtrade opens a project, #keppel selects an OATI product */
+(function(){ const h=location.hash.slice(1); if(byId(h)) openProject(h); else if(oById(h)) showOati(h); })();
 </script>
 </body>
 </html>
